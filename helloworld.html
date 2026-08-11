@@ -1,11 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Profile - IT3130 Lab 4</title>
+
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#87CEEB, #ffffff);
+    overflow-x: hidden;
+}
+
+/* Heading */
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    color: #333;
+}
+
+/* Profile section */
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px gray;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/* 2D Character */
+
+.character {
+    position: relative;
+    width: 120px;
+    height: 150px;
+    margin: auto;
+    animation: bounce 2s infinite;
+}
+
+
+@keyframes bounce {
+
+0%,100% {
+    transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-20px);
+}
+
+}
+
+
+/* Head */
+
+.head {
+    width: 80px;
+    height: 80px;
+    background: #ffd59a;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+}
+
+
+/* Eyes */
+
+.eye {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}
+
+
+/* Body */
+
+.body {
+    width: 70px;
+    height: 60px;
+    background: #3498db;
+    margin: auto;
+    border-radius: 15px;
+}
+
+
+/* Ground */
+
+.ground {
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    background: #7bc043;
+}
+
+
+/* Clouds animation */
+
+.cloud {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: white;
+    border-radius: 50px;
+    top: 80px;
+    animation: moveCloud 15s linear infinite;
+}
+
+
+@keyframes moveCloud {
+
+from {
+    left: -150px;
+}
+
+to {
+    left: 100%;
+}
+
+}
+
+
+.cloud2 {
+    top: 150px;
+    animation-duration: 20s;
+}
+
+
+</style>
+
 </head>
+
+
 <body>
-    
+
+
+<div class="cloud"></div>
+<div class="cloud cloud2"></div>
+
+
+<div class="header">
+
+<h1>
+IT3130 Git Lab 4 - Student Profile
+</h1>
+
+<p>
+<h2>Feature Branch</h2>
+</p>
+
+</div>
+
+
+
+<div class="container">
+
+
+<!-- Student 1 -->
+
+<div class="card">
+
+<div class="character">
+
+<div class="head">
+
+<div class="eye left"></div>
+<div class="eye right"></div>
+
+</div>
+
+<div class="body"></div>
+
+</div>
+
+
+<h2>Kavindi J.K.N</h2>
+
+<p>
+Student ID: IT24100248
+</p>
+
+<p>
+Git Workflow Practical
+</p>
+
+
+</div>
+
+
+
+
+<!-- Student 2 -->
+
+<div class="card">
+
+
+<div class="character">
+
+<div class="head">
+
+<div class="eye left"></div>
+<div class="eye right"></div>
+
+</div>
+
+<div class="body" style="background:#e74c3c;"></div>
+
+</div>
+
+
+<h2>Weerasinghe A.E.K.P</h2>
+
+<p>
+Student ID:IT24103550
+</p>
+
+<p>
+GitHub Collaboration Partner
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="ground"></div>
+
+
 </body>
+
 </html>
